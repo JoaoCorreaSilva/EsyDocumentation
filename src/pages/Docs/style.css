@@ -1,0 +1,197 @@
+.container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Sidebar.css */
+.sidebar {
+    width: 270px;
+    background-color: #fff;
+    color: #9aa0a6;
+    border-right: 1px solid #dcdddd;
+    text-align: left;
+
+    padding: 40px;
+    padding-top: 25px;
+    padding-right: 16px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    overflow-y: auto;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+.menu-item p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #9aa0a6;
+
+    transition: 0.25s;
+}
+
+.menu-item p:hover {
+    color: #2e3134;
+}
+
+.sub-menu {
+    /* padding-left: 10px; */
+    text-indent: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu-item {
+    cursor: pointer;
+    padding: 4px 0;
+    border-radius: 6px;
+    text-align: left;
+
+    transition: 0.25s;
+}
+
+a.sub-menu-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #2e3134;
+}
+
+.sub-menu-item:hover {
+    background-color: rgba(0, 102, 165, 0.1);
+    color: #0066a5;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+/* navbar css */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 60px;
+    width: -webkit-fill-available;
+    border-bottom: 1px solid #DCDDDD;
+    background-color: #fff;
+    padding: 0 50px;
+
+    position: fixed;
+}
+
+.navbar-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logotype {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.85px;
+
+    margin-right: 60px;
+}
+
+.logotype .bosch {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #000;
+}
+
+.logotype .esy {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+
+    background: linear-gradient(180deg, #00a4fd 15.52%, #003253 86.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+}
+
+.links a {
+    color: #A2A3A4;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .25s;
+}
+
+.links a:hover {
+    color: #17181B;
+    font-weight: 600;
+}
+
+/* SearchBar.css */
+.search-bar {
+    width: 300px;
+    height: 32px;
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    font-size: 12px;
+    border: 1px solid #BDC1C6;
+    border-radius: 7px;
+    font-family: "Poppins", sans-serif;
+    text-indent: 37px;
+    margin-left: -30px;
+    background-color: transparent;
+
+    transition: .25s;
+}
+
+input[type="text"]::placeholder {
+    color: #9AA0A6;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #0066a5;
+}
+
+/* system mode */
+
+.system-mode {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 50px;
+}
