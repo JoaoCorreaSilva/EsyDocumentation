@@ -92,7 +92,7 @@ a.sub-menu-item {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+
     height: 60px;
     width: -webkit-fill-available;
     border-bottom: 1px solid #DCDDDD;
@@ -194,4 +194,70 @@ input[type="text"]:focus {
     align-items: center;
     gap: 14px;
     margin-left: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background-color: #1D222C;
+        color: #9aa0a6;
+        border-right: 1px solid #343A46;
+    }
+
+    .menu-item p {
+        color: #9aa0a6;
+    }
+
+    .menu-item p:hover {
+        color: #ffffff;
+    }
+
+    a.sub-menu-item {
+        color: #E8EAED;
+    }
+
+    .sub-menu-item:hover {
+        background-color: rgba(6, 142, 227, 0.1);
+        color: #068EE3;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.12);
+        border: 2px solid #1D222C;
+    }
+
+    /* navbar css */
+    .navbar {
+        border-bottom: 1px solid #343A46;
+        background-color: #1D222C;
+    }
+
+    .logotype .bosch {
+        color: #fff;
+    }
+
+    .links a {
+        color: #A2A3A4;
+    }
+
+    .links a:hover {
+        color: #ffffff;
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        border: 2px solid #1D222C;
+    }
 }

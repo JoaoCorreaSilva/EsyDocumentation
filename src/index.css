@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1D222C;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -76,20 +76,21 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.137);  
+    border-radius: 20px;
+    border: 2px solid white;
+    margin-right: 3px;
+  }
 }
 
 
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.137);  
-  border-radius: 20px;
-  border: 2px solid white;
-  margin-right: 3px;
-}
