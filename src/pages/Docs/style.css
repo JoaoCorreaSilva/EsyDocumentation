@@ -18,6 +18,10 @@
     height: calc(100vh - 60px);
     margin-top: 60px;
     overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .menu-item {

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import LocalButton from "../../assets/components/LocalButton";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,20 @@ import { IoSunnyOutline } from "react-icons/io5"; // para o sol
 export default function Home() {
     const handleClick = () => {
         alert("botão deu certo família :)");
+    };
+
+
+
+    // configs da sidebar
+    // State para controlar a visibilidade dos submenus
+    const [expandedItems, setExpandedItems] = useState({});
+
+    // Função para alternar a visibilidade do submenu
+    const toggleSubMenu = (item) => {
+        setExpandedItems({
+            ...expandedItems,
+            [item]: !expandedItems[item],
+        });
     };
 
     return (
@@ -55,19 +69,193 @@ export default function Home() {
                     <p className="esy">ESY</p>
                 </div>
                 <h1 className="slogan">O jeito Esy de planejar e gerenciar seus eventos</h1>
-                <p>ESY Event System é o gerenciador de eventos da Bosch Campinas. Criado com o intuito de unificar o 
-                    planejamento de eventos da planta e facilitar o dia a dia dos gestores e colaboradores, nossa ferramenta 
-                    conta com funcionalidades que axiliam desde o momento da criação, até a divulgação e finalização dos 
+
+                <div className="btns">
+                    <button className="primary-btn">Cadastre-se</button>
+                    <button className="secondary-btn">Documentação</button>
+                </div>
+
+                <p>ESY Event System é o gerenciador de eventos da Bosch Campinas. Criado com o intuito de unificar o
+                    planejamento de eventos da planta e facilitar o dia a dia dos gestores e colaboradores, nossa ferramenta
+                    conta com funcionalidades que axiliam desde o momento da criação, até a divulgação e finalização dos
                     eventos. Confira mais a seguir.</p>
+
+                <section className="container-section-1">
+                    <div className="container-section-child">
+                        <img src="src\assets\images\event_creation_screen.png" alt="scr" />
+                        <text>
+                            <h2>Criação de eventos</h2>
+                            <p>Em apenas uma única tela é possível criar um evento e já disponibilizá-lo aos colaboradores da sua equipe.</p>
+                        </text>
+                    </div>
+                    <div className="container-section-child">
+                        <text>
+                            <h2>Dashboard para medir e visualizar o sucesso do evento</h2>
+                            <p>Um dashboard que mede o sucesso do evento oferece uma visão rápida e abrangente das métricas-chave, como
+                                participação, feedback e pontos de destaque, ajudando os gestores a entenderem melhor o impacto de suas
+                                iniciativas.</p>
+                        </text>
+                        <img src="src\assets\images\event_analysis_dashboard_default_state.png" alt="scr" />
+                    </div>
+                    <div className="container-section-child">
+                        <img src="src\assets\images\ticket_reservation_screen_contracted.png" alt="scr" />
+                        <text>
+                            <h2>Reserva prévia do ticket e autenticação do participante na entrada do evento</h2>
+                            <p>A reserva antecipada de ingressos e a autenticação na entrada garantem uma experiência fluida e segura
+                                para os participantes, facilitando o controle de acesso e evitando problemas de superlotação.</p>
+                        </text>
+                    </div>
+                    <div className="container-section-child">
+                        <text>
+                            <h2>Calendário interno com os eventos do mês</h2>
+                            <p>Um calendário interno lista todos os eventos disponíveis no mês, facilitando a coordenação de atividades,
+                                gerenciamento e otimização do tempo.</p>
+                        </text>
+                        <img src="src\assets\images\schedule_screen.png" alt="scr" />
+                    </div>
+                </section>
+                <section className="container-section-2">
+                    <h3>Por que usar o ESY?</h3>
+
+                    <div className="cards">
+                        <div className="gradient-container-1">
+                            <div className="container-section-child">
+                                <h1 className="text-gradient">Memórias</h1>
+                                <p>Tenha acesso às memórias de diversos momentos ocorridos em eventos aqui na planta de Campinas</p>
+                            </div>
+                        </div>
+
+                        <div className="gradient-container-2">
+                            <div className="container-section-child">
+                                <h1><div className="text-gradient">Informação</div> facilitada</h1>
+                                <p>Fique por dentro dos eventos que estão ocorrendo e participe daqueles que você se interessar</p>
+                            </div>
+                        </div>
+                        <div className="gradient-container-3">
+                            <div className="container-section-child">
+                                <h1><div className="text-gradient">Conhecimento</div> nunca é demais</h1>
+                                <p>Participe de palestras e workshops e tenha a oportunidade única de aprender mais com cada um deles</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="container-section-3">
+                    <h1>Faça Networking</h1>
+                    <p>Participar dos eventos Bosch oferece inúmeras vantagens, sendo uma delas a oportunidade de expandir sua
+                        rede de network. Ao interagir com colegas de trabalho, líderes, e outros profissionais do setor durante
+                        esses eventos, você tem a chance de estabelecer novas conexões, trocar experiências e construir
+                        relacionamentos valiosos. Essa ampliação da rede de contatos enriquece seu conhecimento e visão sobre
+                        diferentes aspectos da Bosch.</p>
+
+                    <div className="slider">
+                        <div className="slide-track">
+                            <div className="slide">
+                                <img src="src\assets\images\image-1.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-2.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-3.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-4.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-5.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-6.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-1.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-2.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-3.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-4.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-5.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-6.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-1.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-2.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-3.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-4.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-5.png" alt="" />
+                            </div>
+                            <div className="slide">
+                                <img src="src\assets\images\image-6.png" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section className="container-section-4">
+                    <h1>Perguntas Frequentes</h1>
+
+                    <div
+                        className="menu-item"
+                        onClick={() => toggleSubMenu("overview")}
+                    >
+                        <p>Como configuro minha conta?</p>
+                    </div>
+                    {expandedItems["overview"] && (
+                        <div className="sub-menu">
+                            <p>Para configurar sua conta ou preferências vá até a a aba “Configurações”, que se encontra no menu lateral. Na tela de configurações você pode alterar idioma, cores do sistema, email, senha, e nome de perfil. </p>
+                        </div>
+                    )}
+                    <div
+                        className="menu-item"
+                        onClick={() => toggleSubMenu("overview")}
+                    >
+                        <p>Como configuro minha conta?</p>
+                    </div>
+                    {expandedItems["overview"] && (
+                        <div className="sub-menu">
+                            <p></p>
+                        </div>
+                    )}
+                </section>
             </main>
 
+            <footer>
+                <div className="logo-footer">
+                    <p>BOSCH</p>
+                    <p>ESY</p>
+                </div>
+                <div className="center">
+                    <p>© Robert Bosch Ltda. 2024, todos os direitos reservados</p>
+                    <p>Termos de uso</p>
+                    <p>Aviso legal</p>
+                    <p>Declarações e definições de privacidade</p>
+                </div>
+                <div className="contact">
+                    <p>Esy.bosch.br@gmail.com</p>
+                </div>
+            </footer>
 
-            
-            <LocalButton text="teste aqui" onClick={handleClick} />
+            {/* <LocalButton text="teste aqui" onClick={handleClick} />
 
             <Link to="/docs">
                 <button>Docs</button>
-            </Link>
+            </Link> */}
         </div>
     );
 }

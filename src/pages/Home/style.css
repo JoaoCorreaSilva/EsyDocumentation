@@ -121,6 +121,7 @@ input[type="text"]:focus {
 }
 
 @media (prefers-color-scheme: dark) {
+
     /* navbar css */
     .navbar {
         border-bottom: 1px solid #343A46;
@@ -154,13 +155,9 @@ input[type="text"]:focus {
     }
 }
 
-
-
-
-
 main {
     margin-top: 60px;
-    padding: 0 150px;
+    padding: 0 10%;
 
     display: flex;
     flex-direction: column;
@@ -170,6 +167,8 @@ main {
 main .logotype {
     gap: 4px;
     margin-right: 0px;
+
+    margin-top: 140px;
 }
 
 main .logotype .bosch {
@@ -190,4 +189,282 @@ main .logotype .esy {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+main h1.slogan {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+    color: #17181B;
+    margin-top: -10px;
+}
+
+main p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #3C4043;
+
+    max-width: 1200px;
+}
+
+.btns {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    height: 50px;
+    width: 215px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    border: none;
+    color: #fff;
+    background: linear-gradient(90.71deg, #00A5FF 0%, #005893 100%);
+}
+
+.secondary-btn {
+    color: #0096E8;
+    background-color: #fff;
+    border: 2px solid #0096E8;
+}
+
+main section img {
+    width: 50%;
+    height: auto;
+    border: 1px solid #DADCE0;
+    border-radius: 15px;
+}
+
+.container-section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 150px;
+}
+
+.container-section-1 .container-section-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    gap: 6.5%;
+}
+
+.container-section-1 .container-section-child text h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000;
+}
+
+.container-section-1 .container-section-child text {
+    max-width: 530px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.container-section-1> :last-child,
+.container-section-1> :nth-last-child(3) {
+    justify-content: flex-end;
+}
+
+.container-section-1> :last-child text,
+.container-section-1> :nth-last-child(3) text {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.container-section-2 {
+    margin: 150px 0;
+}
+
+.container-section-2 h3 {
+    text-align: left;
+    line-height: 66px;
+    margin-bottom: 26px;
+}
+
+.container-section-2 .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5%;
+}
+
+.container-section-2 .container-section-child {
+    height: 330px;
+    background-color: white;
+
+    border-radius: 18px;
+    text-align: left;
+    padding: 0 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container-section-2 .container-section-child h1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 44px;
+    margin-bottom: 18px;
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.container-section-2 .container-section-child p {
+    color: #000;
+    max-width: 90%;
+}
+
+.container-section-2 .cards> :nth-last-child(2) {
+    margin-top: 65px;
+}
+
+.container-section-2 .cards> :nth-last-child(1) {
+    margin-top: 130px;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #0088D4 0%, #003253 72%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container-section-2 .cards .gradient-container-1 {
+    background: rgb(0, 50, 83);
+    background: linear-gradient(90deg, rgba(0, 50, 83, 0) 0%, rgba(0, 136, 212, 1) 100%);
+    border-radius: 20px;
+    width: 31%;
+    height: 330px;
+    padding: 2px;
+}
+
+.container-section-2 .cards .gradient-container-2 {
+    background: rgb(0, 50, 83);
+    background: linear-gradient(0deg, rgba(0, 50, 83, 1) 0%, rgba(0, 136, 212, 1) 100%);
+    border-radius: 20px;
+    width: 31%;
+    height: 330px;
+    padding: 2px;
+}
+
+.container-section-2 .cards .gradient-container-3 {
+    background: rgb(0, 50, 83);
+    background: linear-gradient(-90deg, rgba(0, 50, 83, 0) 0%, rgba(0, 136, 212, 1) 100%);
+    border-radius: 20px;
+    width: 31%;
+    height: 330px;
+    padding: 2px;
+}
+
+.container-section-3 h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 32px;
+    color: #0e1013;
+    margin-bottom: 30px;
+}
+
+.container-section-3 p {
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+
+.slider {
+    height: 350px;
+    margin: auto;
+    position: relative;
+    width: calc(100vw - 10px);
+    display: grid;
+    flex-direction: row;
+    place-items: center;
+    overflow: hidden;
+
+    margin-bottom: 100px;
+}
+
+.slide-track {
+    display: flex;
+    width: 100%;
+    animation: scroll 45s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: running;
+}
+
+.slide {
+    height: 280px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.slide img {
+    height: 350px;
+    width: 100%;
+    transition: .3s;
+}
+
+.slide img:hover {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100%));
+    }
+}
+
+.container-section-4 .menu-item {
+    align-self: flex-start;
+}
+
+
+
+footer, .logo-footer, .center, .contact {
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000; 
+}
+
+footer {
+    background-color: #F1F3F4;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
 }
