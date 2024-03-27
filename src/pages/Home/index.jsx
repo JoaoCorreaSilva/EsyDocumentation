@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import LocalButton from "../../assets/components/LocalButton";
 import { Link } from "react-router-dom";
 
+import { AiOutlineRight } from 'react-icons/ai';
+
 import "./style.css";
 
 import { GrSearch } from "react-icons/gr"; // import para a lupinha de pesquisa
@@ -16,15 +18,10 @@ export default function Home() {
 
 
     // configs da sidebar
-    // State para controlar a visibilidade dos submenus
-    const [expandedItems, setExpandedItems] = useState({});
+    const [expandedItem, setExpandedItem] = useState(null);
 
-    // Função para alternar a visibilidade do submenu
     const toggleSubMenu = (item) => {
-        setExpandedItems({
-            ...expandedItems,
-            [item]: !expandedItems[item],
-        });
+        setExpandedItem(prevItem => (prevItem === item ? null : item));
     };
 
     return (
@@ -208,30 +205,84 @@ export default function Home() {
                     </div>
                 </section>
                 <section className="container-section-4">
-                    <h1>Perguntas Frequentes</h1>
+                    <div className="faq-container">
+                        <h1>Perguntas Frequentes</h1>
+                        <div
+                            className={`menu-item ${expandedItem === "accountConfig" ? "active" : ""}`}
+                            onClick={() => toggleSubMenu("accountConfig")}
+                        >
+                            <p>Como configuro minha conta?</p>
+                            <span className={`arrow ${expandedItem === "accountConfig" ? "active" : ""}`}>
+                                <AiOutlineRight />
+                            </span>
+                        </div>
+                        {expandedItem === "accountConfig" && (
+                            <div className="sub-menu">
+                                <p>Para configurar sua conta ou preferências vá até a a aba “Configurações”, que se encontra no menu lateral. Na tela de configurações você pode alterar idioma, cores do sistema, email, senha, e nome de perfil. </p>
+                            </div>
+                        )}
 
-                    <div
-                        className="menu-item"
-                        onClick={() => toggleSubMenu("overview")}
-                    >
-                        <p>Como configuro minha conta?</p>
-                    </div>
-                    {expandedItems["overview"] && (
-                        <div className="sub-menu">
-                            <p>Para configurar sua conta ou preferências vá até a a aba “Configurações”, que se encontra no menu lateral. Na tela de configurações você pode alterar idioma, cores do sistema, email, senha, e nome de perfil. </p>
+                        <div
+                            className={`menu-item ${expandedItem === "passwordRecovery" ? "active" : ""}`}
+                            onClick={() => toggleSubMenu("passwordRecovery")}
+                        >
+                            <p>Como posso recuperar minha senha?</p>
+                            <span className={`arrow ${expandedItem === "accountConfig" ? "active" : ""}`}>
+                                <AiOutlineRight />
+                            </span>
                         </div>
-                    )}
-                    <div
-                        className="menu-item"
-                        onClick={() => toggleSubMenu("overview")}
-                    >
-                        <p>Como configuro minha conta?</p>
-                    </div>
-                    {expandedItems["overview"] && (
-                        <div className="sub-menu">
-                            <p></p>
+                        {expandedItem === "passwordRecovery" && (
+                            <div className="sub-menu">
+                                <p>Para recuperar sua senha, preencha o campo de e-mail na tela de login e clique no link “Esqueci minha senha” e um código de confirmação será enviado no seu e-mail para que você possa redefinir sua senha.</p>
+                            </div>
+                        )}
+
+                        <div
+                            className={`menu-item ${expandedItem === "newSession" ? "active" : ""}`}
+                            onClick={() => toggleSubMenu("newSession")}
+                        >
+                            <p>Como faço para iniciar uma nova sessão?</p>
+                            <span className={`arrow ${expandedItem === "accountConfig" ? "active" : ""}`}>
+                                <AiOutlineRight />
+                            </span>
                         </div>
-                    )}
+                        {expandedItem === "newSession" && (
+                            <div className="sub-menu">
+                                <p>Para iniciar uma nova sessão, basta clicar em “Log out” no menu lateral, e confirmar que ser sair da sessão. Após isso você será redirecionado para a tela de login.</p>
+                            </div>
+                        )}
+
+                        <div
+                            className={`menu-item ${expandedItem === "techSupport" ? "active" : ""}`}
+                            onClick={() => toggleSubMenu("techSupport")}
+                        >
+                            <p>Como obter suporte técnico?</p>
+                            <span className={`arrow ${expandedItem === "accountConfig" ? "active" : ""}`}>
+                                <AiOutlineRight />
+                            </span>
+                        </div>
+                        {expandedItem === "techSupport" && (
+                            <div className="sub-menu">
+                                <p>Para obter suporte técnico envie e-mail para o endereço Esy.bosch.br@gmail.com com o assunto correspondente no corpo do e-mail.</p>
+                            </div>
+                        )}
+
+                        <div
+                            className={`menu-item ${expandedItem === "notificationSetup" ? "active" : ""}`}
+                            onClick={() => toggleSubMenu("notificationSetup")}
+                        >
+                            <p>Como configuro notificações ou alertas do ESY?</p>
+                            <span className={`arrow ${expandedItem === "accountConfig" ? "active" : ""}`}>
+                                <AiOutlineRight />
+                            </span>
+                        </div>
+                        {expandedItem === "notificationSetup" && (
+                            <div className="sub-menu">
+                                <p>Para configurar permissões de notificações e alertas, vá na aba de configurações e vá até a última sessão “Notificações e Alertas”</p>
+                            </div>
+                        )}
+                    </div>
+                    <div className="image-faq-container"></div>
                 </section>
             </main>
 
