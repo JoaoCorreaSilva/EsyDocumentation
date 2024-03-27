@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+:root {
+    --title-color: #000;
+    --content-color: #3C4043;
+    --content-color-2: #17181B;
+    --blue: #0088D4;
+}
+
 .container-main {
     display: flex;
     flex-direction: row;
@@ -47,7 +54,7 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 32px;
-    color: #000;
+    color: var(--title-color);
 }
 
 .logotype .esy {
@@ -75,7 +82,7 @@
 }
 
 .links a:hover {
-    color: #17181B;
+    color: var(--content-color-2);
     font-weight: 600;
 }
 
@@ -177,7 +184,7 @@ main .logotype .bosch {
     font-weight: 700;
     font-size: 90px;
     line-height: 135px;
-    color: #000;
+    color: var(--title-color);
 }
 
 main .logotype .esy {
@@ -197,7 +204,7 @@ main h1.slogan {
     font-style: normal;
     font-weight: 500;
     line-height: 34px;
-    color: #17181B;
+    color: var(--content-color-2);
     margin-top: -10px;
 }
 
@@ -206,7 +213,7 @@ main p {
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    color: #3C4043;
+    color: var(--content-color);
 
     max-width: 1200px;
 }
@@ -236,7 +243,7 @@ main p {
 
 .secondary-btn {
     color: #0096E8;
-    background-color: #fff;
+    background-color: transparent;
     border: 2px solid #0096E8;
 }
 
@@ -267,7 +274,7 @@ main section img {
     font-weight: 500;
     font-size: 24px;
     line-height: 40px;
-    color: #000;
+    color: var(--title-color);
 }
 
 .container-section-1 .container-section-child text {
@@ -326,13 +333,13 @@ main section img {
     font-weight: 600;
     line-height: 44px;
     margin-bottom: 18px;
-    color: #000;
+    color: var(--title-color);
     font-style: normal;
     font-weight: 500;
 }
 
 .container-section-2 .container-section-child p {
-    color: #000;
+    color: var(--title-color);
     max-width: 90%;
 }
 
@@ -345,7 +352,7 @@ main section img {
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, #0088D4 0%, #003253 72%);
+    background: linear-gradient(90deg, var(--blue) 0%, #003253 72%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -459,7 +466,7 @@ main section img {
 
 .container-section-4 .faq-container .menu-item p {
     margin: 0;
-    color: #000;
+    color: var(--title-color);
     font-size: 20px;
     font-weight: 500;
     transition: color 0.3s;
@@ -472,7 +479,7 @@ main section img {
 }
 
 .container-section-4 .faq-container .menu-item.active p {
-    color: #0088D4;
+    color: var(--blue);
     font-size: 20px;
     font-weight: 500;
 }
@@ -490,7 +497,7 @@ main section img {
 
 .container-section-4 .faq-container .menu-item.active .arrow {
     transform: translateY(-40%) rotate(90deg);
-    color: #0088D4;
+    color: var(--blue);
 }
 
 .container-section-4 .faq-container h1 {
@@ -498,7 +505,7 @@ main section img {
     font-weight: 500;
     margin-bottom: 64px;
     text-align: left;
-    color: #000;
+    color: var(--title-color);
 }
 
 .container-section-4 .faq-container .sub-menu p {
@@ -515,7 +522,6 @@ main section img {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    transition: .3s;
 }
 
 .container-section-4 {
@@ -537,7 +543,7 @@ footer p {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: #000; 
+    color: var(--title-color); 
 }
 
 footer {
@@ -548,5 +554,42 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --title-color: #fff;
+        --content-color: #f1f3f4;
+        --content-color-2: #f8f9fa;
+        --blue: #00A4FD;
+    }
 
+    footer {
+        background-color: #191E26;
+    }
+
+    .container-section-4 .faq-container .sub-menu p {
+        color: #dadce0;
+    }
+
+    .secondary-btn {
+        border: 2px solid var(--blue);
+        color: var(--blue);
+    }
+
+    .container-section-2 .container-section-child {
+        background-color: #1D222C;
+    }
+
+    .text-gradient {
+        background: linear-gradient(90deg, var(--blue) 0%, #93d4ff 72%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .container-section-4 .image-faq-container {
+        background-image: url('src/assets/images/image-faq-dark.png');
+    }
+
+    .container-section-3 h1 {
+        color: var(--title-color);
+    }
 }
