@@ -435,6 +435,7 @@ main section img {
     height: 350px;
     width: 100%;
     transition: .3s;
+    border: none;
 }
 
 .slide img:hover {
@@ -460,7 +461,7 @@ main section img {
 
     cursor: pointer;
     padding: 30px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #70707067;
     position: relative;
 }
 
@@ -478,7 +479,8 @@ main section img {
     padding-left: 20px;
 }
 
-.container-section-4 .faq-container .menu-item.active p {
+.container-section-4 .faq-container .menu-item.active p,
+.container-section-4 .faq-container .menu-item p:hover {
     color: var(--blue);
     font-size: 20px;
     font-weight: 500;
@@ -486,13 +488,13 @@ main section img {
 
 .container-section-4 .faq-container .menu-item .arrow {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 30px;
     transform: translateY(-40%);
     width: 0;
     height: 0;
     transition: transform 0.3s;
-    transform-origin: center;
+    transform-origin: inherit;
 }
 
 .container-section-4 .faq-container .menu-item.active .arrow {
@@ -533,7 +535,10 @@ main section img {
     gap: 70px;
 }
 
-footer, .logo-footer, .center, .contact {
+footer,
+.logo-footer,
+.center,
+.contact {
     display: flex;
     flex-direction: row;
 }
@@ -543,7 +548,7 @@ footer p {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: var(--title-color); 
+    color: var(--title-color);
 }
 
 footer {
@@ -551,6 +556,35 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 25px 50px;
+}
+
+footer .center {
+    gap: 40px;
+}
+
+footer .logo-footer {
+    display: flex;
+    gap: 2.3px;
+}
+
+footer .logo-footer p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000000;
+    -webkit-text-stroke: 1.3px black;
+}
+
+footer .logo-footer> :first-child {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 48px;
+
+    -webkit-text-stroke: 1.2px black;
+    color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
