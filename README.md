@@ -1,6 +1,9 @@
 # Getting Started
 
 ```
+cd EsyDocumentation
+```
+```
 git clone <linkRepo>
 ```
 ```
