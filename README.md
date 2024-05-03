@@ -1,8 +1,13 @@
 # Getting Started
 
 ```
-git clone https://github.com/EsyProject/EsyDocumentation.git
+git clone <linkRepo>
 ```
+
+```
+cd EsyDocumentation
+```
+
 ```
 npm install or npm i
 ```
