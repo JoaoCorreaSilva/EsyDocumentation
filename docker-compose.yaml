@@ -1,0 +1,12 @@
+# Define the version
+version: "3"
+# Define the services
+services:
+  app:
+  # Install the image based Dockerfile
+    build: .
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/esy
