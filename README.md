@@ -1,7 +1,7 @@
 # Getting Started
 
 ```
-git clone <linkRepo>
+git clone --branch docusaurus <linkRepo>
 ```
 
 ```
