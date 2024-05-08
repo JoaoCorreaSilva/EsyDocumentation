@@ -15,8 +15,6 @@ export default function Home() {
         alert("botão deu certo família :)");
     };
 
-
-
     // configs da sidebar
     const [expandedItem, setExpandedItem] = useState(null);
 
@@ -39,26 +37,6 @@ export default function Home() {
                         <a href="#">Desenvolvedores</a>
                     </div>
                 </div>
-
-                <div className="navbar-area">
-                    <div className="search-bar">
-                        <GrSearch />
-                        <input
-                            type="text"
-                            placeholder="Pesquisar na documentação..."
-                        // value={searchTerm}
-                        // onChange={handleSearch}
-                        />
-                    </div>
-
-                    {/* está fora do container pq resolveu dar piti*/}
-                    <div className="system-mode">
-                        <IoSunnyOutline size={22} />
-                        <IoMoonOutline size={22} />
-
-                        {/* help me jesus */}
-                    </div>
-                </div>
             </div>
             <main>
                 <div className="logotype">
@@ -74,7 +52,7 @@ export default function Home() {
 
                 <p>ESY Event System é o gerenciador de eventos da Bosch Campinas. Criado com o intuito de unificar o
                     planejamento de eventos da planta e facilitar o dia a dia dos gestores e colaboradores, nossa ferramenta
-                    conta com funcionalidades que axiliam desde o momento da criação, até a divulgação e finalização dos
+                    conta com funcionalidades que auxiliam desde o momento da criação, até a divulgação e finalização dos
                     eventos. Confira mais a seguir.</p>
 
                 <section className="container-section-1">
@@ -124,13 +102,13 @@ export default function Home() {
 
                         <div className="gradient-container-2">
                             <div className="container-section-child">
-                                <h1><div className="text-gradient">Informação</div> facilitada</h1>
+                                <h1 className="title-text-cental"><div className="text-gradient">Informação</div> facilitada</h1>
                                 <p>Fique por dentro dos eventos que estão ocorrendo e participe daqueles que você se interessar</p>
                             </div>
                         </div>
                         <div className="gradient-container-3">
                             <div className="container-section-child">
-                                <h1><div className="text-gradient">Conhecimento</div> nunca é demais</h1>
+                                <h1 className="title-text-cental"><div className="text-gradient">Conhecimento</div> nunca é demais</h1>
                                 <p>Participe de palestras e workshops e tenha a oportunidade única de aprender mais com cada um deles</p>
                             </div>
                         </div>
@@ -146,60 +124,11 @@ export default function Home() {
 
                     <div className="slider">
                         <div className="slide-track">
-                            <div className="slide">
-                                <img src="src\assets\images\image-1.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-2.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-3.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-4.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-5.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-6.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-1.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-2.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-3.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-4.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-5.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-6.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-1.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-2.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-3.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-4.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-5.png" alt="" />
-                            </div>
-                            <div className="slide">
-                                <img src="src\assets\images\image-6.png" alt="" />
-                            </div>
+                            {[...Array(18)].map((_, index) => (
+                                <div className="slide" key={index}>
+                                    <img src={`src/assets/images/image-${index % 6 + 1}.png`} alt="" />
+                                </div>
+                            ))}
                         </div>
 
                     </div>
@@ -293,9 +222,6 @@ export default function Home() {
                 </div>
                 <div className="center">
                     <p>© Robert Bosch Ltda. 2024, todos os direitos reservados</p>
-                    <p>Termos de uso</p>
-                    <p>Aviso legal</p>
-                    <p>Declarações e definições de privacidade</p>
                 </div>
                 <div className="contact">
                     <p>Esy.bosch.br@gmail.com</p>
