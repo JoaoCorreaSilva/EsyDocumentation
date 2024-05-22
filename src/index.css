@@ -15,35 +15,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-
 body {
   margin: 0;
   padding: 0;
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
+}
+
+header {
+  background-color: #1D222C;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #535bf2;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.2rem;
   line-height: 1.1;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
 }
 
 button {
@@ -57,12 +84,81 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1D222C;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  main .logotype .esy,
+  main .logotype .bosch {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  main .logotype .esy,
+  main .logotype .bosch {
+    font-size: 60px;
+  }
+
+  main h1.slogan {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  main {
+    margin-top: 60px;
+    padding: 0 5%;
+  }
+
+  #root {
+    padding: 0 2%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  main .logotype .esy,
+  main .logotype .bosch {
+    font-size: 50px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -70,9 +166,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -80,17 +178,15 @@ button:focus-visible {
   body::-webkit-scrollbar {
     width: 10px;
   }
-  
+
   body::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   body::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.137);  
+    background-color: rgba(0, 0, 0, 0.137);
     border-radius: 20px;
     border: 2px solid white;
     margin-right: 3px;
   }
 }
-
-
