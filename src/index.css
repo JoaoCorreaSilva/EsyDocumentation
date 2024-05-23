@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'); */
+
 
 :root {
   font-family: "Poppins", sans-serif;
@@ -33,7 +35,7 @@ nav {
 
 .menu-toggle {
   display: none;
-  font-size: 2em;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -92,6 +94,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.links a {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -188,5 +194,35 @@ button:focus-visible {
     border-radius: 20px;
     border: 2px solid white;
     margin-right: 3px;
+  }
+}
+
+
+/* teste buguer */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+      z-index: 1;
+  }
+
+  .links.open {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
   }
 }

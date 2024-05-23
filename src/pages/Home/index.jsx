@@ -22,6 +22,14 @@ export default function Home() {
         setExpandedItem(prevItem => (prevItem === item ? null : item));
     };
 
+
+    //teste de burguer
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div>
             <div className="navbar">
@@ -31,10 +39,14 @@ export default function Home() {
                         <p className="esy">ESY</p>
                     </div>
 
-                    <div className="links">
+                    <div className={`links ${isOpen ? 'open' : ''}`}>
                         <a href="#">Docs</a>
                         <a href="#">Guia do Usuário</a>
                         <a href="#">Desenvolvedores</a>
+                    </div>
+
+                    <div className="hamburger" onClick={toggleMenu}>
+                        &#9776;
                     </div>
                 </div>
             </div>
